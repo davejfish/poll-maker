@@ -1,1 +1,155 @@
 /* CSS for home page (index.html) */
+
+main {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+        'current-poll'
+        'saved-polls'
+    ;
+}
+
+form {
+    display: grid;
+    gap: 10px;
+    padding: 10px;
+    text-align: center;
+    width: 400px;
+    border: solid 1px black;
+    margin: 10px 0px;
+    background-color: #598392;
+}
+
+label {
+    display: contents;
+}
+
+button {
+    width: fit-content;
+}
+
+#poll {
+    display: grid;
+    grid-template-areas: 
+        'question question'
+        'answer-a answer-b'
+    ;
+    justify-items: center;
+    width: 400px;
+    border: solid 1px black;
+    background-color: #598392;
+}
+
+#poll-tracker {
+    display: grid;
+    grid-template-areas: 
+        'A B'
+        'up-vote-A up-vote-B'
+        'down-vote-A down-vote-B'
+        'end-poll end-poll'
+    ;
+    gap: 10px;
+    justify-items: center;
+    width: 400px;
+    border: solid 1px black;
+    background-color: #598392;
+}
+
+.polls-container {
+    display: grid;
+    grid-template-areas: 
+        'poll-result-question poll-result-question'
+        'poll-result-A poll-result-B'
+        'votes-A votes-B'
+    ;
+    justify-items: center;
+    border: solid 1px black;
+    background-color: #598392;
+}
+
+#previous-polls {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 10px;
+    margin-bottom: 50px;
+}
+
+#create-poll {
+    text-align: center;
+}
+
+#current-poll {
+    grid-area: current-poll;
+}
+
+#saved-polls {
+    grid-area: saved-polls;
+}
+
+#saved-polls h2 {
+    text-align: center;
+}
+
+#question {
+    grid-area: question;
+}
+
+#answer-a {
+    grid-area: answer-a;
+}
+
+#answer-b {
+    grid-area: answer-b;
+}
+
+#A {
+    grid-area: A;
+}
+
+#B {
+    grid-area: B;
+}
+
+#up-vote-A {
+    grid-area: up-vote-A;
+}
+
+#down-vote-A {
+    grid-area: down-vote-A;
+}
+
+#up-vote-B {
+    grid-area: up-vote-B;
+}
+
+#down-vote-B {
+    grid-area: down-vote-B;
+}
+
+#end-poll {
+    grid-area: end-poll;
+}
+
+.poll-result-question {
+    grid-area: poll-result-question;
+}
+
+.poll-result-A {
+    grid-area: poll-result-A;
+}
+
+.poll-result-B {
+    grid-area: poll-result-B;
+}
+
+.votes-A {
+    grid-area: votes-A;
+}
+
+.votes-B {
+    grid-area: votes-B;
+}
+
+.hidden {
+    display: none
+}

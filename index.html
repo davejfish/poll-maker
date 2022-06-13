@@ -15,10 +15,112 @@
 <body>
     <header>
         <img src="assets/html_css_js.png">
-        <h1>Web MVC UI</h1>
+        <h1>poll creator</h1>
     </header>
 
-    <main></main>
+    <main>
+        <section id="current-poll">
+            
+            <section id="create-poll">
+                <h2>
+                    create a poll
+                </h2>
+                <form>
+                    <label>
+                        question:
+                        <input id="poll-question">
+                    </label>
+                    <label>
+                        answer A:
+                        <input id="poll-answer-A">
+                    </label>
+                    <label>
+                        answer B:
+                        <input id="poll-answer-B">
+                    </label>
+                </form>
+                <label id="create-poll">
+                    poll
+                    <button>create!</button>
+                </label>
+            </section>
+            
+            <section id="poll">
+                <div id="question">
+                    <span>question here</span>
+                </div>
+                <div id="answer-a">
+                    <span>answer a</span>
+                </div>
+                <div id="answer-b">
+                    <span>answer b</span>
+                </div>
+            </section>
+            
+            <section id="poll-tracker">
+                <span id="A">0</span>
+                <span id="B">0</span>
+                <button id="up-vote-A">+</button>
+                <button id="down-vote-A">-</button>
+                <button id="up-vote-B">+</button>
+                <button id="down-vote-B">-</button>
+                <button id="end-poll">end poll</button>
+            </section>
+
+        </section>
+        
+        <section id="saved-polls">
+            <h2>
+                previous polls
+            </h2>
+            <div id="previous-polls">
+                <div class="polls-container">
+                    <span class="poll-result-question">question</span>
+                    <span class="poll-result-A">answer a</span>
+                    <span class="poll-result-B">answer b</span>
+                    <span class="votes-A" id="votes-A">0</span>
+                    <span class="votes-B" id="votes-B">0</span>
+                </div>
+                <div class="polls-container">
+                    <span class="poll-result-question">question</span>
+                    <span class="poll-result-A">answer a</span>
+                    <span class="poll-result-B">answer b</span>
+                    <span class="votes-A" id="votes-A">0</span>
+                    <span class="votes-B" id="votes-B">0</span>
+                </div>
+                <div class="polls-container">
+                    <span class="poll-result-question">question</span>
+                    <span class="poll-result-A">answer a</span>
+                    <span class="poll-result-B">answer b</span>
+                    <span class="votes-A" id="votes-A">0</span>
+                    <span class="votes-B" id="votes-B">0</span>
+                </div>
+                <div class="polls-container">
+                    <span class="poll-result-question">question</span>
+                    <span class="poll-result-A">answer a</span>
+                    <span class="poll-result-B">answer b</span>
+                    <span class="votes-A" id="votes-A">0</span>
+                    <span class="votes-B" id="votes-B">0</span>
+                </div>
+                <div class="polls-container">
+                    <span class="poll-result-question">question</span>
+                    <span class="poll-result-A">answer a</span>
+                    <span class="poll-result-B">answer b</span>
+                    <span class="votes-A" id="votes-A">0</span>
+                    <span class="votes-B" id="votes-B">0</span>
+                </div>
+                <div class="polls-container">
+                    <span class="poll-result-question">question</span>
+                    <span class="poll-result-A">answer a</span>
+                    <span class="poll-result-B">answer b</span>
+                    <span class="votes-A" id="votes-A">0</span>
+                    <span class="votes-B" id="votes-B">0</span>
+                </div>
+
+            </div>
+
+        </section>
+    </main>
 
     <footer>&copy;2021 Aspiring Software Developer</footer>
 
