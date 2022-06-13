@@ -9,6 +9,15 @@ main {
     ;
 }
 
+@media screen and (min-width: 800px) {
+    main {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+            'current-poll saved-polls'
+        ;
+    }
+}
+
 form {
     display: grid;
     gap: 10px;
@@ -16,7 +25,7 @@ form {
     text-align: center;
     width: 400px;
     border: solid 1px black;
-    margin: 10px 0px;
+    margin: 10px 20px;
     background-color: #598392;
 }
 
@@ -36,6 +45,7 @@ button {
     ;
     justify-items: center;
     width: 400px;
+    margin: 0px 20px;
     border: solid 1px black;
     background-color: #598392;
 }
@@ -51,6 +61,7 @@ button {
     gap: 10px;
     justify-items: center;
     width: 400px;
+    margin: 0px 20px;
     border: solid 1px black;
     background-color: #598392;
 }
@@ -63,6 +74,7 @@ button {
         'votes-A votes-B'
     ;
     justify-items: center;
+    text-align: center;
     border: solid 1px black;
     background-color: #598392;
 }
@@ -71,7 +83,6 @@ button {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-gap: 10px;
-    margin-bottom: 50px;
 }
 
 #create-poll {
@@ -84,6 +95,7 @@ button {
 
 #saved-polls {
     grid-area: saved-polls;
+    margin: 10px;
 }
 
 #saved-polls h2 {
