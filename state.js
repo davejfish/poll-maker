@@ -23,8 +23,34 @@ export default state;
 // export dispatch functions that modify state
 export function newPoll(question, answerA, answerB) {
     state.poll = {
-        question,
-        answerA,
-        answerB,
+        question: question,
+        answerA: answerA,
+        answerB: answerB,
+        votesA: 0,
+        votesB: 0,
     };
+}
+
+export function upVote(team) {
+    if (team === 'A') {
+        state.poll.votesA++;
+    }
+    if (team === 'B') {
+        state.poll.votesB++;
+    }
+}
+
+export function downVote(team) {
+    if (team === 'A') {
+        if (state.poll.votesA === 0) return;
+        state.poll.votesA--;
+    }
+    if (team === 'B') {
+        if (state.poll.votesB === 0) return;
+        state.poll.votesB--;
+    }
+}
+
+export function endPoll() {
+    console.log('end the poll');
 }

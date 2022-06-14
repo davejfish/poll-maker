@@ -50,7 +50,7 @@ button {
     background-color: #598392;
 }
 
-#poll-tracker {
+.poll-tracker {
     display: grid;
     grid-template-areas: 
         'A B'
@@ -163,5 +163,5 @@ button {
 }
 
 .hidden {
-    display: none
+    display: none;
 }
