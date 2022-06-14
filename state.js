@@ -8,12 +8,12 @@ export function initialize() {
     // state.game = null;
     // state.pastGames = [];
 
-    state.poll = {
-        question: 'cats or dogs',
-        answerA: 'cats',
-        answerB: 'dogs',
-    };
-    // state.poll = null;
+    // state.poll = {
+    //     question: 'cats or dogs',
+    //     answerA: 'cats',
+    //     answerB: 'dogs',
+    // };
+    state.poll = null;
 }
 // call initialize
 initialize();
