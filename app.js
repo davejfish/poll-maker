@@ -11,7 +11,6 @@ import state, { newPoll, upVote, downVote, endPoll } from './state.js';
 // - pass in the root element via querySelector
 // - pass any needed handler functions as properties of an actions object 
 const polls = createPolls(document.querySelector('#saved-polls'));
-console.log(polls);
 
 const PollVoter = createPollVoter(document.querySelector('#poll-tracker'), {
     handleUpVote: (team) => {
