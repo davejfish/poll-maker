@@ -37,7 +37,7 @@ button {
     width: fit-content;
 }
 
-#poll {
+.poll {
     display: grid;
     grid-template-areas: 
         'question question'
@@ -102,15 +102,15 @@ button {
     text-align: center;
 }
 
-#question {
+.question {
     grid-area: question;
 }
 
-#answer-a {
+.answer-a {
     grid-area: answer-a;
 }
 
-#answer-b {
+.answer-b {
     grid-area: answer-b;
 }
 
