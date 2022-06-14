@@ -4,6 +4,7 @@ import state, {
     newPoll,
     upVote,
     downVote,
+    endPoll,
 } from '../state.js';
 
 // make sure state is at known starting point
@@ -92,4 +93,26 @@ test('takes away a vote from A or B', (expect) => {
         votesA: 1,
         votesB: 1,
     });
+});
+
+test('displaying previous polls from polls', (expect) => {
+    expect.deepEqual(state.polls, []);
+
+    newPoll('cats or dogs', 'cats', 'dogs');
+    upVote('A');
+    upVote('A');
+    upVote('B');
+    upVote('B');
+    upVote('B');
+
+    endPoll();
+
+    expect.deepEqual(state.polls, [{
+        question: 'cats or dogs',
+        answerA: 'cats',
+        answerB: 'dogs',
+        votesA: 2,
+        votesB: 3,
+    }]);
+    expect.deepEqual(state.poll, null);
 });
