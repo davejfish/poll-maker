@@ -1,5 +1,6 @@
 import state, {
     initialize,
+    newPoll,
     // import dispatch functions
 } from '../state.js';
 
@@ -17,5 +18,15 @@ test('the first state test...', (expect) => {
 
 
     // remove this line when starting your test
-    expect.deepEqual(state, {});
+    expect.deepEqual(state.poll, null);
+});
+
+test('setting state from a input', (expect) => {
+    // what is the initial expected state?
+    expect.equal(state.poll, null);
+    // use the action
+    newPoll('cats or dogs', 'cats', 'dogs');
+    const newState = state.poll;
+    // what should the state be now?
+    expect.deepEqual(state.poll, newState);
 });

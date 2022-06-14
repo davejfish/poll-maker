@@ -7,6 +7,13 @@ export function initialize() {
     // For example:
     // state.game = null;
     // state.pastGames = [];
+
+    // state.poll = {
+    //     question: 'cats or dogs',
+    //     answerA: 'cats',
+    //     answerB: 'dogs',
+    // };
+    state.poll = null;
 }
 // call initialize
 initialize();
@@ -14,3 +21,10 @@ initialize();
 export default state;
 
 // export dispatch functions that modify state
+export function newPoll(question, answerA, answerB) {
+    state.poll = {
+        question,
+        answerA,
+        answerB,
+    };
+}
