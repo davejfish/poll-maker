@@ -14,6 +14,7 @@ export function initialize() {
     //     answerB: 'dogs',
     // };
     state.poll = null;
+    state.polls = [];
 }
 // call initialize
 initialize();
@@ -52,5 +53,6 @@ export function downVote(team) {
 }
 
 export function endPoll() {
-    console.log('end the poll');
+    state.polls.push(state.poll);
+    state.poll = null;
 }

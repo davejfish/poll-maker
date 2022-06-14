@@ -13,8 +13,7 @@ export default function createNewPoll(root, { handleNewPoll }) {
     });
     // should return its component render function
     // return ({ data }) => {
-    return (props) => {
-        const poll = props.poll;
+    return ({ poll }) => {
 
         if (poll) {
             root.classList.add('hidden');

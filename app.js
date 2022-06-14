@@ -4,11 +4,15 @@
 import createNewPoll from './components/newPoll.js';
 import createPollDisplay from './components/pollDisplay.js';
 import createPollVoter from './components/PollVoter.js';
+import createPolls from './components/savedPolls.js';
 // import state and dispatch functions
 import state, { newPoll, upVote, downVote, endPoll } from './state.js';
 // Create each component: 
 // - pass in the root element via querySelector
 // - pass any needed handler functions as properties of an actions object 
+const polls = createPolls(document.querySelector('#saved-polls'));
+console.log(polls);
+
 const PollVoter = createPollVoter(document.querySelector('#poll-tracker'), {
     handleUpVote: (team) => {
         upVote(team);
@@ -39,6 +43,7 @@ function display() {
     PollDisplay({ poll: state.poll });
     PollVoter({ poll: state.poll });
     NewPoll({ poll: state.poll });
+    polls({ polls: state.polls });
 }
 
 // Call display on page load

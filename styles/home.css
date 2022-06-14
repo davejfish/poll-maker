@@ -29,6 +29,10 @@ form {
     background-color: #598392;
 }
 
+h2 {
+    text-align: center;
+}
+
 label {
     display: contents;
 }
@@ -79,7 +83,7 @@ button {
     background-color: #598392;
 }
 
-#previous-polls {
+.previous-polls {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-gap: 10px;
@@ -98,8 +102,14 @@ button {
     margin: 10px;
 }
 
-#saved-polls h2 {
+/* #saved-polls h2 {
     text-align: center;
+} */
+
+h2 {
+    align-self: center;
+    width: 400px;
+    max-width: 400px;
 }
 
 .question {

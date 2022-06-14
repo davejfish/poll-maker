@@ -7,8 +7,7 @@ export default function createPollDisplay(root) {
 
     // should return its component render function
     // return ({ game }) => {
-    return (props) => {
-        const poll = props.poll;
+    return ({ poll }) => {
         if (!poll) {
             root.classList.add('hidden');
             return;
